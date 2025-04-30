@@ -1,0 +1,75 @@
+# Welcome - Agent Communication Protocol
+
+Get to know the Agent Communication Protocol
+
+## Overview
+
+[Agent Communication Protocol home page](https://agentcommunicationprotocol.dev/): This is the main entry point for the Agent Communication Protocol, providing an overview and access to various resources related to the protocol.
+
+[Welcome](https://agentcommunicationprotocol.dev/introduction/welcome): An introductory page that outlines the purpose and significance of the Agent Communication Protocol.
+
+## Getting Started
+
+[Quickstart](https://agentcommunicationprotocol.dev/introduction/quickstart): A guide designed to help users quickly set up and start using the Agent Communication Protocol with minimal configuration.
+
+[Example Agents](https://agentcommunicationprotocol.dev/introduction/example-agents): A collection of sample agents that demonstrate the capabilities and functionalities of the Agent Communication Protocol.
+
+## Agent Management
+
+[Agent Detail](https://agentcommunicationprotocol.dev/core-concepts/agent-detail): Detailed information about individual agents, including their configurations and operational parameters.
+
+[Agent Discovery](https://agentcommunicationprotocol.dev/core-concepts/agent-discovery): A section that explains how to discover available agents within the system, facilitating easier integration and usage.
+
+[Agent Lifecycle](https://agentcommunicationprotocol.dev/core-concepts/agent-lifecycle): An overview of the lifecycle of agents, detailing the stages from creation to termination.
+
+## Communication Structure
+
+[Message Structure](https://agentcommunicationprotocol.dev/core-concepts/message-structure): A technical description of the message formats used within the Agent Communication Protocol, essential for understanding data exchange.
+
+[Production-grade](https://agentcommunicationprotocol.dev/core-concepts/production-grade): Guidelines and best practices for deploying agents in a production environment, ensuring reliability and performance.
+
+[Wrap Agent](https://agentcommunicationprotocol.dev/how-to/wrap-existing-agent): Instructions on how to wrap existing functionalities into agents, enhancing modularity and reusability.
+
+[Discover & Run Agent](https://agentcommunicationprotocol.dev/how-to/discover-and-run-agent): A guide on how to discover and execute agents effectively within the protocol framework.
+
+[Generate Artifacts](https://agentcommunicationprotocol.dev/how-to/generate-artifacts): Information on how to generate necessary artifacts for agent deployment and operation.
+
+[Compose Agents](https://agentcommunicationprotocol.dev/how-to/compose-agents): Instructions on composing new agents by combining existing functionalities and services.
+
+[Debug](https://agentcommunicationprotocol.dev/how-to/debug): Tools and techniques for debugging agents, helping developers troubleshoot issues effectively.
+
+[Await External Response](https://agentcommunicationprotocol.dev/how-to/await-external-response): A description of how agents can handle asynchronous operations by waiting for external responses.
+
+## Technical Specifications
+
+[OpenAPI Spec](https://github.com/i-am-bee/acp/blob/main/docs/spec/openapi.yaml): The OpenAPI specification for the Agent Communication Protocol, providing a detailed description of the API endpoints and their functionalities.
+
+## Community and Support
+
+[Mission & Team](https://agentcommunicationprotocol.dev/about/mission-and-team): Information about the mission of the Agent Communication Protocol and the team behind its development.
+
+[Contribute](https://agentcommunicationprotocol.dev/about/contribute): Guidelines for contributing to the Agent Communication Protocol, encouraging community involvement and collaboration.
+
+[What's Next](https://agentcommunicationprotocol.dev/about/whats-next): Insights into future developments and enhancements planned for the Agent Communication Protocol.
+
+[MCP and A2A](https://agentcommunicationprotocol.dev/about/mcp-and-a2a): An explanation of the relationship between the Agent Communication Protocol (MCP) and Agent-to-Agent (A2A) communication.
+
+[Support](https://github.com/i-am-bee/acp/discussions/categories/q-a): Resources and contact information for obtaining support related to the Agent Communication Protocol.
+
+[GitHub](https://github.com/i-am-bee/acp): The GitHub repository for the Agent Communication Protocol, where users can access the source code and contribute to the project.
+
+## Additional Resources
+
+[BeeAI](https://docs.beeai.dev/): A resource related to BeeAI, potentially offering additional tools or integrations with the Agent Communication Protocol.
+
+[REST endpoints](https://agentcommunicationprotocol.dev/spec/agents-list): A detailed list of REST endpoints available within the Agent Communication Protocol, essential for developers working with the API.
+
+[SDK](https://github.com/i-am-bee/acp/tree/main/python): Information about the Software Development Kit (SDK) available for the Agent Communication Protocol, facilitating easier development.
+
+[discord](https://discord.gg/AZFrp3UF5k): A link to the Discord community for users of the Agent Communication Protocol, providing a platform for discussion and support.
+
+[bluesky](https://bsky.app/profile/beeaiagents.bsky.social): A link to the Bluesky platform, possibly related to the Agent Communication Protocol.
+
+[youtube](https://www.youtube.com/@BeeAIAgents): A link to the YouTube channel featuring tutorials and informational videos about the Agent Communication Protocol.
+
+[Agent Communication Protocol: Welcome](http://agentcommunicationprotocol.dev/): A reiteration of the welcome page, emphasizing the importance of understanding the protocol for effective usage.
