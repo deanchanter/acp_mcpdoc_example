@@ -15,8 +15,8 @@ if __name__ == "__main__":
     server = create_server(
         [
             {
-                "name": "ACP Documentation",
-                "llms_txt": llm_text_path,
+                "name": "Agent Communication Protocol Documentation",
+                "llms_txt": "https://agentcommunicationprotocol.dev/llms.txt"
             },
             # You can add multiple documentation sources
             # {
