@@ -61,7 +61,7 @@ class SessionManager:
     async def cleanup(self):
         await self.exit_stack.aclose()
 
-def to_framework_message(self, role: Role, content: str) -> beeai_framework.backend.Message:
+def to_framework_message(role: Role, content: str) -> beeai_framework.backend.Message:
     match role:
         case Role.USER:
             return UserMessage(content)
@@ -92,7 +92,7 @@ async def chat_agent(input: list[Message], context: Context) -> AsyncGenerator:
         tools=session_manager.mcpdoctools, 
         memory=TokenMemory(session_manager.llm)
     )
-    
+    print(input)
     # Process messages
     framework_messages = [
         to_framework_message(Role(message.parts[0].role), str(message)) 
