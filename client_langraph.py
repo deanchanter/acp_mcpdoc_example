@@ -16,7 +16,7 @@ async def client() -> None:
             run = await client.run_sync(
                 agent="acp_doc_agent", input=[user_message_input]
             )
-            print(run)
+            print(run.output[0].parts[0].content)
 
 if __name__ == "__main__":
     asyncio.run(client())

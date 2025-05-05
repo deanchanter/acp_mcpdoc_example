@@ -61,14 +61,14 @@ class SessionManager:
     async def cleanup(self):
         await self.exit_stack.aclose()
 
-    def to_framework_message(self, role: Role, content: str) -> beeai_framework.backend.Message:
-        match role:
-            case Role.USER:
-                return UserMessage(content)
-            case Role.ASSISTANT:
-                return AssistantMessage(content)
-            case _:
-                raise ValueError(f"Unsupported role {role}")
+def to_framework_message(self, role: Role, content: str) -> beeai_framework.backend.Message:
+    match role:
+        case Role.USER:
+            return UserMessage(content)
+        case Role.ASSISTANT:
+            return AssistantMessage(content)
+        case _:
+            raise ValueError(f"Unsupported role {role}")
 
 
 # Create server and session manager
@@ -95,7 +95,7 @@ async def chat_agent(input: list[Message], context: Context) -> AsyncGenerator:
     
     # Process messages
     framework_messages = [
-        session_manager.to_framework_message(Role(message.parts[0].role), str(message)) 
+        to_framework_message(Role(message.parts[0].role), str(message)) 
         for message in input
     ]
     await agent.memory.add_many(framework_messages)
@@ -112,15 +112,14 @@ async def chat_agent(input: list[Message], context: Context) -> AsyncGenerator:
                     case "final_answer":
                         yield MessagePart(content=update, role="assistant")
 
-
 if __name__ == "__main__":
-    # Initialize session before starting the server
-    loop = asyncio.get_event_loop()
-    loop.create_task(session_manager.initialize())
-    
     try:
+        # Run everything in a single event loop
         server.run()
+    except KeyboardInterrupt:
+        print("\nShutting down gracefully...")
     finally:
-        # Ensure cleanup on exit
-        if not loop.is_closed():
-            loop.run_until_complete(session_manager.cleanup())
+        # Create a new event loop for cleanup since we're outside async context
+        loop = asyncio.new_event_loop()
+        loop.run_until_complete(session_manager.cleanup())
+        loop.close()

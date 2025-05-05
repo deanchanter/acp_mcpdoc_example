@@ -26,7 +26,7 @@ class SessionManager:
         self.initialized = False
         
         # Create LLM model
-        self.modelID = "qwen3:32b"
+        self.modelID = "qwen3:8b"
         self.model = ChatOllama(model=self.modelID, temperature=0)
         
         # Alternative model configuration
@@ -86,17 +86,18 @@ async def acp_doc_agent(input: list[Message], context: Context) -> AsyncGenerato
     print(input[0].parts[0].content)
     response = await session_manager.agent.ainvoke({'messages': [HumanMessage(input[0].parts[0].content)]})
     print(response)
-    yield response
+    yield response['messages'][-1].content
+
 
 
 if __name__ == "__main__":
-    # Initialize session before starting the server
-    loop = asyncio.get_event_loop()
-    loop.create_task(session_manager.initialize())
-    
     try:
+        # Run everything in a single event loop
         server.run()
+    except KeyboardInterrupt:
+        print("\nShutting down gracefully...")
     finally:
-        # Ensure cleanup on exit
-        if not loop.is_closed():
-            loop.run_until_complete(session_manager.cleanup())
+        # Create a new event loop for cleanup since we're outside async context
+        loop = asyncio.new_event_loop()
+        loop.run_until_complete(session_manager.cleanup())
+        loop.close()
