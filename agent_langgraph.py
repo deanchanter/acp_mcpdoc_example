@@ -4,6 +4,7 @@ from mcp.client.stdio import stdio_client
 from langchain_mcp_adapters.tools import load_mcp_tools
 from langchain_ollama import ChatOllama
 from langchain_aws import ChatBedrock
+from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 from dotenv import load_dotenv
 from acp_sdk.server import Context, Server
@@ -26,8 +27,11 @@ class SessionManager:
         self.initialized = False
         
         # Create LLM model
-        self.modelID = "qwen3:8b"
+        self.modelID = "qwen3:32b"
         self.model = ChatOllama(model=self.modelID, temperature=0)
+
+        #self.modelID = "gpt-4.1-mini"
+        #self.model = ChatOpenAI(model=self.modelID, temperature=0)
         
         # Alternative model configuration
         # self.modelID = "us.anthropic.claude-3-7-sonnet-20250219-v1:0"

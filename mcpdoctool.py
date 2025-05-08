@@ -16,7 +16,11 @@ if __name__ == "__main__":
         [
             {
                 "name": "Agent Communication Protocol Documentation",
-                "llms_txt": "https://agentcommunicationprotocol.dev/llms.txt"
+                "llms_txt": "https://agentcommunicationprotocol.dev/llms-full.txt"
+            },
+            {
+                "name": "Langraph Documentation",
+                "llms_txt": "https://langchain-ai.github.io/langgraph/llms.txt",
             },
             # You can add multiple documentation sources
             # {

@@ -16,6 +16,7 @@ dependencies = [
     { name = "langchain-aws" },
     { name = "langchain-mcp-adapters" },
     { name = "langchain-ollama" },
+    { name = "langchain-openai" },
     { name = "langgraph" },
     { name = "mcpdoc" },
     { name = "pydantic-settings" },
@@ -28,6 +29,7 @@ requires-dist = [
     { name = "langchain-aws", specifier = ">=0.2.22" },
     { name = "langchain-mcp-adapters", specifier = ">=0.0.9" },
     { name = "langchain-ollama", specifier = ">=0.3.2" },
+    { name = "langchain-openai", specifier = ">=0.3.16" },
     { name = "langgraph", specifier = ">=0.4.1" },
     { name = "mcpdoc", specifier = ">=0.0.8" },
     { name = "pydantic-settings", specifier = ">=2.9.1" },
@@ -845,6 +847,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/21/99/f548adc83e9f4d06805cc2fc530a94fca321318919c27ec8d5ad9fab51ab/langchain_ollama-0.3.2.tar.gz", hash = "sha256:9e747e7bda1b55cdfa344433814b035be3f06d1bae32b1ffb696ccfc12cfa8ae", size = 21147 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3a/a7/d0fff871a353e6f602fe94912576219b47639db5a08ad454ea914cc11c8d/langchain_ollama-0.3.2-py3-none-any.whl", hash = "sha256:f7516f2f22d912dba1286d644bff00c287799e758d7e465a1439244a1bb02820", size = 20702 },
+]
+
+[[package]]
+name = "langchain-openai"
+version = "0.3.16"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "openai" },
+    { name = "tiktoken" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/53/fb/536562278d932c80e6a7143f46f14cc3006c0828d77c4cb6a69be112519c/langchain_openai-0.3.16.tar.gz", hash = "sha256:4e423e39d072f1432adc9430f2905fe635cc019f01ad1bdffa5ed8d0dda32149", size = 271031 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/34/d0/bb39691e8ca3748668aa660920afc20e4c92231f3bca0cf85c62214171d3/langchain_openai-0.3.16-py3-none-any.whl", hash = "sha256:eae74a6758d38a26159c5fde5abf8ef313e6400efb01a08f12dd7410c9f4fd0f", size = 62758 },
 ]
 
 [[package]]

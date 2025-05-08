@@ -10,6 +10,7 @@ dependencies = [
     "langchain-aws>=0.2.22",
     "langchain-mcp-adapters>=0.0.9",
     "langchain-ollama>=0.3.2",
+    "langchain-openai>=0.3.16",
     "langgraph>=0.4.1",
     "mcpdoc>=0.0.8",
     "pydantic-settings>=2.9.1",
